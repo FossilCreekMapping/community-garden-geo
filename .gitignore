@@ -1,0 +1,27 @@
+# Secrets
+.env
+*.env
+!config/agol.env.example
+
+# Geodatabase output
+output/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# ArcGIS lock files
+*.lock
+*.lck
+
+# GeoPackage journals
+*.gpkg-journal
+*.gpkg-wal
+*.gpkg-shm

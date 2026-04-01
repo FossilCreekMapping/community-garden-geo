@@ -1,0 +1,431 @@
+{
+  "schema_version": "1.0.0",
+  "geodatabase_name": "WoodhavenGardens.gdb",
+  "spatial_reference_wkid": 3857,
+
+  "domains": {
+    "dom_ZoneType": {
+      "description": "Management zone purpose",
+      "field_type": "TEXT",
+      "domain_type": "CODED",
+      "values": {
+        "annual_vegetable": "Annual Vegetable",
+        "perennial": "Perennial",
+        "orchard": "Orchard",
+        "compost": "Compost",
+        "pollinator": "Pollinator",
+        "native_habitat": "Native Habitat",
+        "demo_plot": "Demo Plot",
+        "outdoor_classroom": "Outdoor Classroom",
+        "research_trial": "Research Trial",
+        "buffer": "Buffer",
+        "parking": "Parking",
+        "building_pad": "Building Pad",
+        "stormwater": "Stormwater",
+        "other": "Other"
+      }
+    },
+    "dom_ZoneStatus": {
+      "description": "Management zone status",
+      "field_type": "TEXT",
+      "domain_type": "CODED",
+      "values": {
+        "active": "Active",
+        "fallow": "Fallow",
+        "reserved": "Reserved"
+      }
+    },
+    "dom_BedRole": {
+      "description": "Garden bed primary role",
+      "field_type": "TEXT",
+      "domain_type": "CODED",
+      "values": {
+        "production": "Production",
+        "education": "Education",
+        "demonstration": "Demonstration",
+        "research": "Research",
+        "mixed": "Mixed"
+      }
+    },
+    "dom_BedStatus": {
+      "description": "Garden bed status",
+      "field_type": "TEXT",
+      "domain_type": "CODED",
+      "values": {
+        "active": "Active",
+        "fallow": "Fallow",
+        "available": "Available",
+        "reserved": "Reserved"
+      }
+    },
+    "dom_SunExposure": {
+      "description": "Sun exposure level",
+      "field_type": "TEXT",
+      "domain_type": "CODED",
+      "values": {
+        "full_sun": "Full Sun",
+        "partial_sun": "Partial Sun",
+        "partial_shade": "Partial Shade",
+        "full_shade": "Full Shade"
+      }
+    },
+    "dom_Irrigation": {
+      "description": "Irrigation method",
+      "field_type": "TEXT",
+      "domain_type": "CODED",
+      "values": {
+        "drip": "Drip",
+        "sprinkler": "Sprinkler",
+        "hand_water": "Hand Water",
+        "rain_fed": "Rain-Fed",
+        "none": "None"
+      }
+    },
+    "dom_PlannedStatus": {
+      "description": "Planned area lifecycle status",
+      "field_type": "TEXT",
+      "domain_type": "CODED",
+      "values": {
+        "proposed": "Proposed",
+        "approved": "Approved",
+        "in_progress": "In Progress",
+        "completed": "Completed"
+      }
+    },
+    "dom_Priority": {
+      "description": "Planning priority",
+      "field_type": "TEXT",
+      "domain_type": "CODED",
+      "values": {
+        "high": "High",
+        "medium": "Medium",
+        "low": "Low"
+      }
+    },
+    "dom_GatheringType": {
+      "description": "Gathering area type",
+      "field_type": "TEXT",
+      "domain_type": "CODED",
+      "values": {
+        "picnic": "Picnic",
+        "amphitheater": "Amphitheater",
+        "class": "Class",
+        "workshop": "Workshop",
+        "field_day": "Field Day",
+        "fire_ring": "Fire Ring",
+        "other": "Other"
+      }
+    },
+    "dom_StructureType": {
+      "description": "Building or structure type",
+      "field_type": "TEXT",
+      "domain_type": "CODED",
+      "values": {
+        "shed": "Shed",
+        "pump_house": "Pump House",
+        "pavilion": "Pavilion",
+        "greenhouse": "Greenhouse",
+        "restroom": "Restroom",
+        "barn": "Barn",
+        "other": "Other"
+      }
+    },
+    "dom_Condition": {
+      "description": "Asset condition",
+      "field_type": "TEXT",
+      "domain_type": "CODED",
+      "values": {
+        "excellent": "Excellent",
+        "good": "Good",
+        "fair": "Fair",
+        "poor": "Poor",
+        "needs_replacement": "Needs Replacement"
+      }
+    },
+    "dom_WaterType": {
+      "description": "Water body type",
+      "field_type": "TEXT",
+      "domain_type": "CODED",
+      "values": {
+        "pond": "Pond",
+        "detention_basin": "Detention Basin",
+        "rain_garden": "Rain Garden",
+        "cistern": "Cistern",
+        "other": "Other"
+      }
+    },
+    "dom_TrailSurface": {
+      "description": "Trail surface material",
+      "field_type": "TEXT",
+      "domain_type": "CODED",
+      "values": {
+        "mulch": "Mulch",
+        "gravel": "Gravel",
+        "paved": "Paved",
+        "grass": "Grass",
+        "boardwalk": "Boardwalk",
+        "dirt": "Dirt"
+      }
+    },
+    "dom_TrailUse": {
+      "description": "Trail use type",
+      "field_type": "TEXT",
+      "domain_type": "CODED",
+      "values": {
+        "general": "General",
+        "interpretive": "Interpretive"
+      }
+    },
+    "dom_PlantHealth": {
+      "description": "Plant health status",
+      "field_type": "TEXT",
+      "domain_type": "CODED",
+      "values": {
+        "thriving": "Thriving",
+        "healthy": "Healthy",
+        "stressed": "Stressed",
+        "declining": "Declining",
+        "dead": "Dead"
+      }
+    },
+    "dom_PlantSource": {
+      "description": "Plant origin",
+      "field_type": "TEXT",
+      "domain_type": "CODED",
+      "values": {
+        "nursery": "Nursery",
+        "seed": "Seed",
+        "transplant": "Transplant",
+        "wild": "Wild / Existing",
+        "donated": "Donated",
+        "unknown": "Unknown"
+      }
+    },
+    "dom_AmenityType": {
+      "description": "Amenity type",
+      "field_type": "TEXT",
+      "domain_type": "CODED",
+      "values": {
+        "bench": "Bench",
+        "picnic_table": "Picnic Table",
+        "interpretive_sign": "Interpretive Sign",
+        "learning_station": "Learning Station",
+        "sign": "Sign",
+        "gate": "Gate",
+        "water_spigot": "Water Spigot",
+        "tool_locker": "Tool Locker",
+        "trash_can": "Trash Can",
+        "bike_rack": "Bike Rack",
+        "other": "Other"
+      }
+    },
+    "dom_EquipmentType": {
+      "description": "Equipment type",
+      "field_type": "TEXT",
+      "domain_type": "CODED",
+      "values": {
+        "tiller": "Tiller",
+        "mower": "Mower",
+        "generator": "Generator",
+        "hose_reel": "Hose Reel",
+        "wheelbarrow": "Wheelbarrow",
+        "storage_bin": "Storage Bin",
+        "other": "Other"
+      }
+    },
+    "dom_BoundarySource": {
+      "description": "Property boundary source type",
+      "field_type": "TEXT",
+      "domain_type": "CODED",
+      "values": {
+        "survey": "Survey",
+        "approximate": "Approximate",
+        "deed": "Deed",
+        "gps": "GPS Collected"
+      }
+    }
+  },
+
+  "feature_classes": [
+    {
+      "name": "PropertyBoundary",
+      "geometry_type": "POLYGON",
+      "has_m": false,
+      "has_z": false,
+      "fields": [
+        {"name": "name",               "type": "TEXT",   "length": 100, "alias": "Property Name"},
+        {"name": "boundary_source",     "type": "TEXT",   "length": 50,  "alias": "Boundary Source",      "domain": "dom_BoundarySource"},
+        {"name": "notes",               "type": "TEXT",   "length": 500, "alias": "Notes"},
+        {"name": "last_verified_date",  "type": "DATE",                  "alias": "Last Verified Date"}
+      ]
+    },
+    {
+      "name": "ManagementZone",
+      "geometry_type": "POLYGON",
+      "has_m": false,
+      "has_z": false,
+      "fields": [
+        {"name": "name",        "type": "TEXT",   "length": 100, "alias": "Zone Name"},
+        {"name": "zone_type",   "type": "TEXT",   "length": 50,  "alias": "Zone Type",   "domain": "dom_ZoneType"},
+        {"name": "status",      "type": "TEXT",   "length": 50,  "alias": "Status",      "domain": "dom_ZoneStatus"},
+        {"name": "notes",       "type": "TEXT",   "length": 500, "alias": "Notes"}
+      ]
+    },
+    {
+      "name": "GardenBed",
+      "geometry_type": "POLYGON",
+      "has_m": false,
+      "has_z": false,
+      "fields": [
+        {"name": "bed_id",        "type": "TEXT",   "length": 20,  "alias": "Bed ID"},
+        {"name": "assignee",      "type": "TEXT",   "length": 100, "alias": "Assignee"},
+        {"name": "bed_role",      "type": "TEXT",   "length": 50,  "alias": "Bed Role",       "domain": "dom_BedRole"},
+        {"name": "soil_notes",    "type": "TEXT",   "length": 500, "alias": "Soil Notes"},
+        {"name": "sun_exposure",  "type": "TEXT",   "length": 50,  "alias": "Sun Exposure",   "domain": "dom_SunExposure"},
+        {"name": "irrigation",    "type": "TEXT",   "length": 50,  "alias": "Irrigation",     "domain": "dom_Irrigation"},
+        {"name": "status",        "type": "TEXT",   "length": 50,  "alias": "Status",         "domain": "dom_BedStatus"}
+      ]
+    },
+    {
+      "name": "PlannedArea",
+      "geometry_type": "POLYGON",
+      "has_m": false,
+      "has_z": false,
+      "fields": [
+        {"name": "plan_name",      "type": "TEXT",   "length": 150, "alias": "Plan Name"},
+        {"name": "priority",       "type": "TEXT",   "length": 20,  "alias": "Priority",        "domain": "dom_Priority"},
+        {"name": "target_season",  "type": "TEXT",   "length": 50,  "alias": "Target Season"},
+        {"name": "status",         "type": "TEXT",   "length": 50,  "alias": "Status",          "domain": "dom_PlannedStatus"},
+        {"name": "description",    "type": "TEXT",   "length": 1000,"alias": "Description"}
+      ]
+    },
+    {
+      "name": "GatheringArea",
+      "geometry_type": "POLYGON",
+      "has_m": false,
+      "has_z": false,
+      "fields": [
+        {"name": "name",                "type": "TEXT",   "length": 100,  "alias": "Area Name"},
+        {"name": "gathering_type",      "type": "TEXT",   "length": 50,   "alias": "Gathering Type",     "domain": "dom_GatheringType"},
+        {"name": "capacity_estimate",   "type": "SHORT",                  "alias": "Estimated Capacity"},
+        {"name": "reservation_policy",  "type": "TEXT",   "length": 500,  "alias": "Reservation Policy"}
+      ]
+    },
+    {
+      "name": "BuildingFootprint",
+      "geometry_type": "POLYGON",
+      "has_m": false,
+      "has_z": false,
+      "fields": [
+        {"name": "name",            "type": "TEXT",   "length": 100, "alias": "Building Name"},
+        {"name": "structure_type",  "type": "TEXT",   "length": 50,  "alias": "Structure Type",  "domain": "dom_StructureType"},
+        {"name": "condition",       "type": "TEXT",   "length": 50,  "alias": "Condition",       "domain": "dom_Condition"},
+        {"name": "notes",           "type": "TEXT",   "length": 500, "alias": "Notes"}
+      ]
+    },
+    {
+      "name": "WaterBody",
+      "geometry_type": "POLYGON",
+      "has_m": false,
+      "has_z": false,
+      "fields": [
+        {"name": "name",        "type": "TEXT",   "length": 100, "alias": "Water Body Name"},
+        {"name": "water_type",  "type": "TEXT",   "length": 50,  "alias": "Water Type",    "domain": "dom_WaterType"},
+        {"name": "notes",       "type": "TEXT",   "length": 500, "alias": "Notes"}
+      ]
+    },
+    {
+      "name": "Trail",
+      "geometry_type": "POLYLINE",
+      "has_m": false,
+      "has_z": false,
+      "fields": [
+        {"name": "name",           "type": "TEXT",    "length": 100, "alias": "Trail Name"},
+        {"name": "surface",        "type": "TEXT",    "length": 50,  "alias": "Surface",        "domain": "dom_TrailSurface"},
+        {"name": "trail_use",      "type": "TEXT",    "length": 50,  "alias": "Trail Use",      "domain": "dom_TrailUse"},
+        {"name": "width_m",        "type": "DOUBLE",                 "alias": "Width (m)"},
+        {"name": "accessibility",  "type": "TEXT",    "length": 100, "alias": "Accessibility"},
+        {"name": "status",         "type": "TEXT",    "length": 50,  "alias": "Status",         "domain": "dom_Condition"}
+      ]
+    },
+    {
+      "name": "Plant",
+      "geometry_type": "POINT",
+      "has_m": false,
+      "has_z": false,
+      "fields": [
+        {"name": "common_name",     "type": "TEXT",   "length": 150, "alias": "Common Name"},
+        {"name": "scientific_name", "type": "TEXT",   "length": 200, "alias": "Scientific Name"},
+        {"name": "planted_date",    "type": "DATE",                  "alias": "Date Planted"},
+        {"name": "health",          "type": "TEXT",   "length": 50,  "alias": "Health",        "domain": "dom_PlantHealth"},
+        {"name": "plant_source",    "type": "TEXT",   "length": 50,  "alias": "Source",        "domain": "dom_PlantSource"},
+        {"name": "bed_id",          "type": "TEXT",   "length": 20,  "alias": "Bed ID"},
+        {"name": "notes",           "type": "TEXT",   "length": 500, "alias": "Notes"}
+      ]
+    },
+    {
+      "name": "Amenity",
+      "geometry_type": "POINT",
+      "has_m": false,
+      "has_z": false,
+      "fields": [
+        {"name": "amenity_type",  "type": "TEXT",   "length": 50,  "alias": "Amenity Type",  "domain": "dom_AmenityType"},
+        {"name": "condition",     "type": "TEXT",   "length": 50,  "alias": "Condition",     "domain": "dom_Condition"},
+        {"name": "install_date",  "type": "DATE",                  "alias": "Install Date"},
+        {"name": "notes",         "type": "TEXT",   "length": 500, "alias": "Notes"}
+      ]
+    },
+    {
+      "name": "EquipmentPoint",
+      "geometry_type": "POINT",
+      "has_m": false,
+      "has_z": false,
+      "fields": [
+        {"name": "equipment_type",  "type": "TEXT",   "length": 50,  "alias": "Equipment Type",  "domain": "dom_EquipmentType"},
+        {"name": "condition",       "type": "TEXT",   "length": 50,  "alias": "Condition",       "domain": "dom_Condition"},
+        {"name": "notes",           "type": "TEXT",   "length": 500, "alias": "Notes"}
+      ]
+    },
+    {
+      "name": "PropertyMarker",
+      "geometry_type": "POINT",
+      "has_m": false,
+      "has_z": false,
+      "fields": [
+        {"name": "marker_type",  "type": "TEXT",   "length": 50,  "alias": "Marker Type"},
+        {"name": "notes",        "type": "TEXT",   "length": 500, "alias": "Notes"}
+      ]
+    }
+  ],
+
+  "tables": [
+    {
+      "name": "CropSeason",
+      "fields": [
+        {"name": "bed_id",         "type": "TEXT",   "length": 20,   "alias": "Bed ID"},
+        {"name": "season_year",    "type": "SHORT",                  "alias": "Season Year"},
+        {"name": "crop",           "type": "TEXT",   "length": 100,  "alias": "Crop"},
+        {"name": "variety",        "type": "TEXT",   "length": 100,  "alias": "Variety"},
+        {"name": "plant_date",     "type": "DATE",                   "alias": "Plant Date"},
+        {"name": "harvest_end",    "type": "DATE",                   "alias": "Harvest End"},
+        {"name": "yield_notes",    "type": "TEXT",   "length": 500,  "alias": "Yield Notes"},
+        {"name": "pest_issues",    "type": "TEXT",   "length": 500,  "alias": "Pest Issues"},
+        {"name": "program_notes",  "type": "TEXT",   "length": 500,  "alias": "Program Notes"}
+      ]
+    }
+  ],
+
+  "relationships": [
+    {
+      "name": "GardenBed_CropSeason",
+      "origin_table": "GardenBed",
+      "destination_table": "CropSeason",
+      "relationship_type": "COMPOSITE",
+      "cardinality": "ONE_TO_MANY",
+      "origin_primary_key": "bed_id",
+      "origin_foreign_key": "bed_id",
+      "forward_label": "Crop seasons for this bed",
+      "backward_label": "Garden bed for this crop season"
+    }
+  ]
+}
